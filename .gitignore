@@ -1,0 +1,9 @@
+/tmp/cache
+/tmp/logs
+/Plugin/AclExtras
+/Plugin/DebugKit
+/Plugin/Localized
+/Vendor/composer
+/Vendor/pear-pear.cakephp.org
+/Vendor/bin
+/Vendor/autoload.php
