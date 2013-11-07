@@ -25,4 +25,25 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    public $components = array('Auth', 'Session');
+
+    public function beforeFilter() {
+        $this->Auth->authorize = array('Controller');
+        $this->Auth->authenticate = array(
+            'all' => array(
+                'scope' => array('User.is_active' => 1)
+            ),
+            'Basic'
+        );
+
+        $this->Auth->allow('index', 'view');
+    }
+
+    public function isAuthorized($user) {
+        if (isset($user['role']) && ($user['role'] != 'admin')) {
+            return false;
+        }
+        return true;
+    }
+
 }

@@ -15,10 +15,11 @@
             return $location.url();
         };
 
-        $scope.login = function() {
-            $scope.$emit('event:loginRequest', $scope.username, $scope.password);
-            $location.path('/login');
-        };
+//        $scope.login = function() {
+//            $scope.$emit('event:loginRequest', $scope.username, $scope.password);
+//            //$location.path('/login');
+//        };
+
         $scope.logout = function() {
             $rootScope.user = null;
             $scope.username = $scope.password = null;
@@ -56,7 +57,7 @@
             console.log('call delPost');
             var todel = $scope.posts[index];
             $http
-                    .delete($rootScope.appUrl + '/posts/' + todel.Post.id+'.json')
+                    .delete($rootScope.appUrl + '/posts/' + todel.Post.id + '.json')
                     .success(function(data, status, headers, config) {
                         load();
                     }).error(function(data, status, headers, config) {
@@ -71,8 +72,8 @@
 
         $scope.savePost = function() {
             console.log('call savePost');
-            var _data={};
-            _data.Post=$scope.post;
+            var _data = {};
+            _data.Post = $scope.post;
             $http
                     .post($rootScope.appUrl + '/posts.json', _data)
                     .success(function(data, status, headers, config) {
@@ -99,16 +100,42 @@
 
         $scope.updatePost = function() {
             console.log('call updatePost');
-            
-             var _data={};
-            _data.Post=$scope.post;
+
+            var _data = {};
+            _data.Post = $scope.post;
             $http
-                    .put($rootScope.appUrl + '/posts/' + $scope.post.id+'.json', _data)
+                    .put($rootScope.appUrl + '/posts/' + $scope.post.id + '.json', _data)
                     .success(function(data, status, headers, config) {
                         $location.path('/posts');
                     }).error(function(data, status, headers, config) {
             });
         }
+    });
+
+
+    as.controller('RegisterCtrl', function($scope, $rootScope, $http, $location) {
+
+        $scope.user = {};
+
+        $scope.register = function() {
+            console.log('call register');
+            var _data = {};
+            _data.User = $scope.user;
+            $http
+                    .post($rootScope.appUrl + '/users/add.json', _data)
+                    .success(function(data, status, headers, config) {
+                        $location.path('/login');
+                    })
+                    .error(function(data, status, headers, config) {
+                    });
+        }
+    });
+
+    as.controller('LoginCtrl', function($scope, $rootScope, $http, $location) {
+        $scope.login = function() {
+            $scope.$emit('event:loginRequest', $scope.username, $scope.password);
+            //$location.path('/login');
+        };
     });
 
 }());

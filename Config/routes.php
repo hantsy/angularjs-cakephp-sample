@@ -31,6 +31,7 @@ Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'
 CakePlugin::routes();
 
 Router::mapResources("posts");
+Router::mapResources("users");
 Router::parseExtensions();
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use

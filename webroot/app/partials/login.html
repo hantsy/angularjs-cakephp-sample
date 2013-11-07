@@ -1,20 +1,22 @@
-<div>
-    <fieldset>
-        <div class="control-group">
-            <label class="control-label" for="username">Username</label>
-            <div class="controls">
-                <input type="text" id="username" ng-model="username" required="required" class="input-block-level"/>
+<div ng-controller="LoginCtrl">
+    <form>
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input type="text" id="username" ng-model="username" required="required" class="input-block-level"/>
+                </div>
             </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="password">Password</label>
-            <div class="controls">
-                <input type="password" id="password" ng-model="password" required="required" class="input-block-level"/>
+            <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <input type="password" id="password" ng-model="password" required="required" class="input-block-level"/>
+                </div>
             </div>
+        </fieldset>
+        <div class="form-actions">
+            <a ng-click="login()" class="btn btn-primary btn-block">Login</a>
+            <a  class="link" href="#/register">Not Registered</a>
         </div>
-    </fieldset>
-    <div class="form-actions">
-        <a ng-click="login()" class="btn btn-primary btn-block">Login</a>
-        <a  class="link" href="#/register">Not Registered</a>
-    </div>
+    </form>
 </div>

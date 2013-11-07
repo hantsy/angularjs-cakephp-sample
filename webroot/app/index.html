@@ -29,11 +29,12 @@
                     </li>
                 </ul>
                 <p class="navbar-text pull-right" style="margin-right: 5em" ng-show="user.username">
-                    <a ng-click="logout()">Logout</a>
+                     Welcome {{user.username}}, <button class="btn btn-primary btn-small" ng-click="logout()">Logout</button>
                 </p>
 
-                <p class="navbar-text pull-right" style="margin-right: 5em" ng-show="user.username">
-                    Welcome {{user.username}}
+                <p class="navbar-text pull-right" style="margin-right: 5em" ng-hide="user.username">
+                    <a href="#/login" class="btn btn-primary btn-small">Login</a> or 
+                    <a href="#/register" class="btn btn-success btn-small">Register NOW!</a>
                 </p>
             </div>
         </div>
@@ -43,32 +44,6 @@
                 <button type="button" class="close" ng-click="message().show = false">&times;</button>
                 <msg key-expr="message().text"></msg>
             </div>
-
-            <div class="modal" style="display: none" id="login">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal">x</a>
-                    <h3>Login</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="control-group">
-                        <label class="control-label" for="username">Username</label>
-                        <div class="controls">
-                            <input type="text" id="username" ng-model="username" required="required" class="input-block-level"/>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="password">Password</label>
-                        <div class="controls">
-                            <input type="password" id="password" ng-model="password" required="required" class="input-block-level"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a ng-click="login()" class="btn btn-primary">Login</a>
-                    <a data-dismiss="modal" class="btn">Cancel</a>
-                </div>
-            </div>
-
             <ng-view></ng-view>
             <div class="footer">Angular seed app: v<span app-version></span></div>
         </div>

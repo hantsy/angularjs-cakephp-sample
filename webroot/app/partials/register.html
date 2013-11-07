@@ -1,26 +1,12 @@
 <div ng-controller="RegisterCtrl">
-    <h1 class="page-header">Post List</h1>
-    <form id="ef" ng-submit="register()">
+    <h1 class="page-header">Register <small>all fields are required.</small></h1>
+    <form  ng-submit="register()">
         <fieldset>
             <div class="control-group">
-                <label class="control-label" for="firstName">First Name</label>
-                <div class="controls">
-                    <input id="firstName" type="text" class="input-block-level"
-                           ng-model="user.firstName"></input>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="lastName">Last Name</label>
-                <div class="controls">
-                    <input id="lastName" type="text" class="input-block-level"
-                           ng-model="user.lastName" required="true"></input>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="lastName">Email</label>
+                <label class="control-label" for="email">Email</label>
                 <div class="controls">
                     <input id="emailAddress" type="email" class="input-block-level"
-                           ng-model="user.emailAddress" required="true"></input>
+                           ng-model="user.email" required="true"></input>
                 </div>
             </div>
             <div class="control-group">
@@ -39,7 +25,7 @@
             </div>
         </fieldset>
         <div class=form-actions>			
-            <input type="submit" class="btn btn-primary" value="Save"></input>
+            <input type="submit" class="btn btn-primary btn-block" value="Register"/>
         </div>
     </form>
 </div>
