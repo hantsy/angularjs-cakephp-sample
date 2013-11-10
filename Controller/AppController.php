@@ -31,7 +31,7 @@ class AppController extends Controller {
         $this->Auth->authorize = array('Controller');
         $this->Auth->authenticate = array(
             'all' => array(
-                'scope' => array('User.is_active' => 1)
+                //'scope' => array('User.is_active' => 1)
             ),
             'Basic'
         );

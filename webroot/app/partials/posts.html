@@ -7,6 +7,7 @@
                 <th>TITLE</th>
                 <th>CONTENT</th>
                 <th>CREATED DATE</th>
+                <th>AUTHOR</th>
                 <th width="50px"></th>
             </tr>
         </thead>
@@ -16,18 +17,19 @@
                 <td>{{e.Post.title}}</td>
                 <td>{{e.Post.body}}</td>
                 <td>{{e.Post.created|date:'short'}}</td>
-                <td><a ng-click="editPost($index)"><i
+                <td>{{e.User.username}}</td>
+                <td><a ng-click="editPost($index)" ng-show="user.id &&user.id==e.Post.user_id"><i
                             class="icon-pencil"></i>
                     </a>
                     &nbsp;
-                    <a ng-click="delPost($index)"><i
+                    <a ng-click="delPost($index)" ng-show="user.id &&user.id==e.Post.user_id"><i
                             class="icon-remove-circle"></i></a></td>
             </tr>
         </tbody>
     </table>
 
     <p>
-        <button type="button" class="btn btn-success"  
+        <button type="button" class="btn btn-success" ng-show="user.username"
                 ng-click="addPost()">
             <b class="icon-plus-sign"></b>Add Post
         </button>

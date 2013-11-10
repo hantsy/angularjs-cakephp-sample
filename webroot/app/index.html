@@ -7,39 +7,68 @@
         <link rel="stylesheet" href="css/app.css"/>
     </head>
     <body ng-controller="AppCtrl">
-        <div class="navbar navbar-fixed">
+        <div class="navbar">
             <div class="navbar-inner">
-                <a class="brand" href="#">
-                    <msg key="title"></msg>
-                </a>
-                <ul class="nav">
-                    <li ng-class="activeWhen(path() == '/posts')">
-                        <a href="#/posts">Posts</a>
-                    </li>
-                    <li ng-class="activeWhen(path() == '/new-post')">
-                        <a href="#/new-post">New Post</a>
-                    </li>
-                </ul>
-                <ul class="nav nav-pills pull-right">
-                    <li ng-class="activeWhen(language() == 'zh_CN')">
-                        <a ng-click="setLanguage('zh_CN')">中文</a>
-                    </li>
-                    <li ng-class="activeWhen(language() == 'en')">
-                        <a ng-click="setLanguage('en')">English</a>
-                    </li>
-                </ul>
-                <p class="navbar-text pull-right" style="margin-right: 5em" ng-show="user.username">
-                     Welcome {{user.username}}, <button class="btn btn-primary btn-small" ng-click="logout()">Logout</button>
-                </p>
+                <div class="container-fluid">
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
 
-                <p class="navbar-text pull-right" style="margin-right: 5em" ng-hide="user.username">
-                    <a href="#/login" class="btn btn-primary btn-small">Login</a> or 
-                    <a href="#/register" class="btn btn-success btn-small">Register NOW!</a>
-                </p>
+                    <a class="brand" href="#">
+                        <msg key="title"></msg>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li ng-class="activeWhen(path() == '/posts')">
+                                <a href="#/posts">Posts</a>
+                            </li>
+                            <li ng-class="activeWhen(path() == '/new-post')">
+                                <a href="#/new-post">New Post</a>
+                            </li>
+                            
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Language
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li ng-class="activeWhen(language() == 'zh_CN')">
+                                        <a ng-click="setLanguage('zh_CN')">中文</a>
+                                    </li>
+                                    <li ng-class="activeWhen(language() == 'en')">
+                                        <a ng-click="setLanguage('en')">English</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"  ng-show="user.username">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    {{user.username}}
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li ng-class="activeWhen(path() == '/profile')">
+                                        <a href="#/profile">Profile</a>
+                                    </li>
+                                    <li>
+                                         <a class="btn btn-primary btn-small" ng-click="logout()">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+                            <a href="#/login" class="btn btn-primary btn-small" ng-hide="user.username">Login</a>
+                            <a href="#/register" class="btn btn-success btn-small" ng-hide="user.username">Register NOW!</a>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container-fluid">
             <div ng-class="'alert alert-' + message().type" ng-show="message().show">
                 <button type="button" class="close" ng-click="message().show = false">&times;</button>
                 <msg key-expr="message().text"></msg>

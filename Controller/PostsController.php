@@ -46,14 +46,17 @@ class PostsController extends AppController {
     }
 
     public function add() {
-        //$this->Post->id = $id;
+        $this->request->data['Post']['user_id'] = $this->Auth->user('id'); //
         if ($this->Post->save($this->request->data)) {
             $message = array(
                 'text' => __('Saved'),
                 'type' => 'success'
             );
         } else {
-            $message = 'Error';
+            $message = array(
+                'text' => __('Error'),
+                'type' => 'error'
+            );
         }
         $this->set(array(
             'message' => $message,
@@ -64,9 +67,15 @@ class PostsController extends AppController {
     public function edit($id) {
         $this->Post->id = $id;
         if ($this->Post->save($this->request->data)) {
-            $message = 'Saved';
+            $message = array(
+                'text' => __('Saved'),
+                'type' => 'success'
+            );
         } else {
-            $message = 'Error';
+            $message = array(
+                'text' => __('Error'),
+                'type' => 'error'
+            );
         }
         $this->set(array(
             'message' => $message,
@@ -76,9 +85,15 @@ class PostsController extends AppController {
 
     public function delete($id) {
         if ($this->Post->delete($id)) {
-            $message = 'Deleted';
+            $message = array(
+                'text' => __('Deleted'),
+                'type' => 'success'
+            );
         } else {
-            $message = 'Error';
+            $message = array(
+                'text' => __('Error'),
+                'type' => 'error'
+            );
         }
         $this->set(array(
             'message' => $message,
