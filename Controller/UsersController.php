@@ -20,7 +20,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add', 'login'); // We can remove this line after we're finished
+        $this->Auth->allow('add', 'login'); 
     }
 
     public function login() {

@@ -15,9 +15,9 @@ class User extends AppModel {
         if (!isset($this->data[$this->alias]['role'])) {
             $this->data[$this->alias]['role'] = 'author';
         }
-        if (!isset($this->data[$this->alias]['is_active'])) {
-            $this->data[$this->alias]['is_active'] = 1;
-        }
+//        if (!isset($this->data[$this->alias]['is_active'])) {
+//            $this->data[$this->alias]['is_active'] = 1;
+//        }
         return true;
     }
 
