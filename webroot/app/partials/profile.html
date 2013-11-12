@@ -1,0 +1,13 @@
+<div>
+    <h1 class="page-header">Profile</h1>
+    <dl class="dl-horizontal">
+        <dt>Username:</dt>
+        <dd>{{user.username}}</dd>
+        <dt>Email:</dt>
+        <dd><a href="mailto:{{user.email}}" ng-show="user.email">{{user.email}}</a><span ng-show="!user.email">n/a</span></dd>
+        <dt>Role:</dt>
+        <dd>{{user.role}}</dd>
+        <dt>Created:</dt>
+        <dd>{{user.created|date:'short'}}</dd>
+    </dl>
+</div>
