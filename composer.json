@@ -9,8 +9,8 @@
     "require": {
         "pear-cakephp/cakephp": ">=2.4.0",
 	"cakephp/debug_kit": "2.2.*",
-	"cakephp/localized": "2.1.x-dev"
-	
+	"cakephp/localized": "2.1.x-dev",
+	"markstory/acl_extras": "dev-master"	
     },
     "config": {
         "vendor-dir": "Vendor/"
