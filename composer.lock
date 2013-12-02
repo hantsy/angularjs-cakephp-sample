@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4a6b8712dcfad975d0aa9460e676d694",
+    "hash": "ab8afadc42eeff9b5e0ad243423940d2",
     "packages": [
         {
             "name": "cakephp/debug_kit",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "49afa821703da5af536051cabd5dbaa5d21a1eca"
+                "reference": "0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/49afa821703da5af536051cabd5dbaa5d21a1eca",
-                "reference": "49afa821703da5af536051cabd5dbaa5d21a1eca",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90",
+                "reference": "0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,8 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.2.x-dev"
-                }
+                },
+                "installer-name": "DebugKit"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -51,7 +52,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2013-08-23 01:52:11"
+            "time": "2013-11-07 18:15:29"
         },
         {
             "name": "cakephp/localized",
@@ -59,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/localized.git",
-                "reference": "a9491d8cce6c1ddc57a5be4e435806a6b225ee5d"
+                "reference": "3d742794b67eddcf8d32c29d48b176cab09d1797"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/localized/zipball/a9491d8cce6c1ddc57a5be4e435806a6b225ee5d",
-                "reference": "a9491d8cce6c1ddc57a5be4e435806a6b225ee5d",
+                "url": "https://api.github.com/repos/cakephp/localized/zipball/3d742794b67eddcf8d32c29d48b176cab09d1797",
+                "reference": "3d742794b67eddcf8d32c29d48b176cab09d1797",
                 "shasum": ""
             },
             "require": {
@@ -96,20 +97,20 @@
                 "l10n",
                 "localized"
             ],
-            "time": "2013-09-21 18:55:04"
+            "time": "2013-11-01 21:30:10"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f"
+                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d792632d27e1980d921cbbba12eab7b888338d4c",
+                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c",
                 "shasum": ""
             },
             "replace": {
@@ -139,7 +140,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -152,6 +153,7 @@
                 "agl",
                 "cakephp",
                 "codeigniter",
+                "concrete5",
                 "drupal",
                 "fuelphp",
                 "installer",
@@ -169,14 +171,52 @@
                 "wordpress",
                 "zend"
             ],
-            "time": "2013-08-20 04:37:09"
+            "time": "2013-10-24 16:13:49"
+        },
+        {
+            "name": "markstory/acl_extras",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markstory/acl_extras.git",
+                "reference": "f136d970e347c8dda77e2fc278727beafec7aaf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markstory/acl_extras/zipball/f136d970e347c8dda77e2fc278727beafec7aaf9",
+                "reference": "f136d970e347c8dda77e2fc278727beafec7aaf9",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.2.17"
+            },
+            "type": "cakephp-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                }
+            ],
+            "description": "Additional tools for managing DB ACL in CakePHP applications.",
+            "homepage": "https://github.com/markstory/acl_extras",
+            "keywords": [
+                "acl",
+                "cakephp"
+            ],
+            "time": "2013-10-26 00:34:46"
         },
         {
             "name": "pear-pear.cakephp.org/CakePHP",
-            "version": "2.4.2",
+            "version": "2.4.3",
             "dist": {
                 "type": "file",
-                "url": "http://pear.cakephp.org/get/CakePHP-2.4.2.tgz",
+                "url": "http://pear.cakephp.org/get/CakePHP-2.4.3.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -184,7 +224,7 @@
                 "php": ">=5.2.8.0"
             },
             "replace": {
-                "pear-cakephp/cakephp": "== 2.4.2.0"
+                "pear-cakephp/cakephp": "== 2.4.3.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -206,7 +246,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cakephp/localized": 20
+        "cakephp/localized": 20,
+        "markstory/acl_extras": 20
     },
     "platform": [
 
