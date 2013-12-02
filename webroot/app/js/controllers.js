@@ -27,7 +27,7 @@
             $location.url('/');
         };
 
-        $rootScope.appUrl = "http://localhost";
+        $rootScope.appUrl = "http://192.168.100.2";
 
     });
 
