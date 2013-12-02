@@ -26,6 +26,7 @@ if (function_exists('ini_set')) {
 
 	// the following line differs from its sibling
 	// /app/Console/cake.php
+    require dirname(dirname(__FILE__)) . '/Vendor/autoload.php';
 	ini_set('include_path', $root . PATH_SEPARATOR . 'D:' . $ds . 'wamp' . $ds . 'bin' . $ds . 'php' . $ds . 'php5.4.12' . $ds . 'pear' . PATH_SEPARATOR . ini_get('include_path'));
 }
 
