@@ -10,7 +10,9 @@ An example appliation using AnguarJS/Bootstrap as frontend and CakePHP as REST A
 * install Vagrant1.3 or later
 * type command bellow:
 
-    vagrant plugin install vagrant-berkshelf
-    vagrant up
+<pre>
+$ vagrant plugin install vagrant-berkshelf
+$ vagrant up
+</pre>
 
 then access to http://192.168.100.2/app/index.html
