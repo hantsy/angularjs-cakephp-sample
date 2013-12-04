@@ -7,3 +7,4 @@
 /Vendor/pear-pear.cakephp.org
 /Vendor/bin
 /Vendor/autoload.php
+/composer.lock
