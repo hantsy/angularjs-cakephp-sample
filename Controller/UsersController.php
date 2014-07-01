@@ -20,11 +20,12 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
+		
         $this->Auth->allow('add', 'login'); 
     }
 
     public function login() {
-        if ($this->Session->read('Auth.User')) {
+        if ($this->Auth->user()) {
             $this->set(array(
                 'message' => array(
                     'text' => __('You are logged in!'),
@@ -41,7 +42,7 @@ class UsersController extends AppController {
             if ($this->Auth->login()) {
                 // return $this->redirect($this->Auth->redirect());
                 $this->set(array(
-                    'user' => $this->Session->read('Auth.User'),
+                    'user' => $this->Auth->user(),
                     '_serialize' => array('user')
                 ));
                 // $this->response->send();

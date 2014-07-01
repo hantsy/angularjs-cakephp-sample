@@ -25,9 +25,10 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $components = array('Auth', 'Session');
+    public $components = array('Auth');
 
     public function beforeFilter() {
+		$this->Auth->sessionKey = false;
         $this->Auth->authorize = array('Controller');
         $this->Auth->authenticate = array(
             'all' => array(
