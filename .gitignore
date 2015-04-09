@@ -6,3 +6,4 @@
 /Vendor/bin
 /Vendor/autoload.php
 /composer.lock
+/composer.phar
