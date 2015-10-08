@@ -3,6 +3,8 @@ angular-cakephp-sample
 
 An example appliation using AnguarJS/Bootstrap as frontend and CakePHP as REST API producer.
 
+Pelease read the [wiki](https://github.com/hantsy/angularjs-cakephp-sample/wiki) for more details.
+
 
 ### How to try
 
