@@ -1,0 +1,155 @@
+repo_name: hantsy/angularjs-cakephp-sample
+report_id: 62a0748df2b702a759c4a6d6c3ef2c0b
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:23:44+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 12
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample
+  detection_source: Repo Metadata
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/Config/Schema/db_acl.sql
+  detection_source: Config/Schema/db_acl.sql
+  last_updated_by: hantsy
+  last_updated_on: 2013-11-06 13:01:39.000000000 Z
+- name: CakePHP
+  description: The Rapid Development Framework for PHP
+  website_url: https://cakephp.org/
+  version: '2.6'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1196/default_6de4f48b9e8db9eef67580fad2e58fd642b82327.jpg
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/composer.json
+  detection_source: composer.json
+  last_updated_by: hantsy
+  last_updated_on: 2013-11-06 13:01:39.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample
+  detection_source: Repo Metadata
+- name: PHPUnit
+  description: Testing framework for PHP
+  website_url: https://phpunit.de/
+  version: '3.7'
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/1616/1_WsEnddd5Y4EgEHsT054kUQ.jpeg
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/composer.json
+  detection_source: composer.json
+  last_updated_by: hantsy
+  last_updated_on: 2013-11-06 13:01:39.000000000 Z
+- name: Vagrant
+  description: A tool for building and distributing development environments
+  website_url: http://www.vagrantup.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Virtual Machine Management
+  image_url: https://img.stackshare.io/service/768/150px-Vagrant.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/Vagrantfile
+  detection_source: Vagrantfile
+  last_updated_by: Yusuke Ando
+  last_updated_on: 2013-12-02 08:19:41.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample
+  detection_source: Repo Metadata
+- name: cakephp/cakephp
+  description: The CakePHP framework
+  package_url: https://packagist.org/cakephp/cakephp
+  version: '2.6'
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/packagist/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/composer.json
+  detection_source: composer.json
+  last_updated_by: hantsy
+  last_updated_on: 2015-04-09 10:36:04.000000000 Z
+- name: cakephp/debug_kit
+  description: CakePHP Debug Kit
+  package_url: https://packagist.org/cakephp/debug_kit
+  version: '2.2'
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/packagist/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/composer.json
+  detection_source: composer.json
+  last_updated_by: hantsy
+  last_updated_on: 2015-04-09 10:36:04.000000000 Z
+- name: phpunit/phpunit
+  description: The PHP Unit Testing framework
+  package_url: https://packagist.org/phpunit/phpunit
+  version: '3.7'
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/packagist/image.png
+  detection_source_url: https://github.com/hantsy/angularjs-cakephp-sample/blob/master/composer.json
+  detection_source: composer.json
+  last_updated_by: hantsy
+  last_updated_on: 2015-04-09 10:36:04.000000000 Z
